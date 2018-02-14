@@ -32,13 +32,20 @@ declare const cordova: any;
  */
 @Plugin({
   pluginName: 'JINS MEME ES',
-  plugin: 'cordova-plugin-jins-meme-es',
+  plugin: 'com.jins_jp.meme.plugin',
   pluginRef: 'com.jins_jp.meme.plugin',
   repo: 'https://github.com/BlyncSync/cordova-plugin-jins-meme-es',
   platforms: ['Android', 'iOS']
 })
 @Injectable()
 export class JinsMeme extends IonicNativePlugin {
+  /**
+   * Test plugin
+   *
+   *@returns {Promise<any>}
+   */
+  @Cordova()
+  test(): Promise<any> { return; }
   /**
    * Authentication and authorization of App and SDK.
    * Must call this method first.
