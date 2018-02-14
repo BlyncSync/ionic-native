@@ -31,21 +31,14 @@ declare const cordova: any;
  * ```
  */
 @Plugin({
-  pluginName: 'JINS MEME',
-  plugin: 'https://www.npmjs.com/package/cordova-plugin-jins-meme-backgrounding',
-  pluginRef: 'JinsMemePlugin',
-  repo: 'https://github.com/BlyncSync/cordova-plugin-jins-meme-backgrounding',
+  pluginName: 'JINS MEME ES',
+  plugin: 'cordova-plugin-jins-meme-es',
+  pluginRef: 'com.jins_jp.meme.plugin',
+  repo: 'https://github.com/BlyncSync/cordova-plugin-jins-meme-es',
   platforms: ['Android', 'iOS']
 })
 @Injectable()
 export class JinsMeme extends IonicNativePlugin {
-  /**
-   * Test plugin
-   *
-   *@returns {Promise<any>}
-   */
-  @Cordova()
-  test(): Promise<any> { return; }
   /**
    * Authentication and authorization of App and SDK.
    * Must call this method first.
@@ -84,7 +77,7 @@ export class JinsMeme extends IonicNativePlugin {
   connect(target: string): Observable<any> {
     return new Observable<any>((observer: any) => {
       let data = cordova.plugins.JinsMemePlugin.connect(target, observer.next.bind(observer), observer.complete.bind(observer), observer.error.bind(observer));
-      return () => console.log('@ionic-native/jins-meme', data);
+      return () => console.log('@ionic-native/jins-meme: '+data);
     });
   }
   /**
