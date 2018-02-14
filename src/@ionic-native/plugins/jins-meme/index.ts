@@ -32,7 +32,7 @@ declare const cordova: any;
  */
 @Plugin({
   pluginName: 'JINS MEME',
-  plugin: 'cordova-plugin-jins-meme-backgrounding',
+  plugin: 'https://www.npmjs.com/package/cordova-plugin-jins-meme-backgrounding',
   pluginRef: 'JinsMemePlugin',
   repo: 'https://github.com/BlyncSync/cordova-plugin-jins-meme-backgrounding',
   platforms: ['Android', 'iOS']
